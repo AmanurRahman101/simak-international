@@ -4,10 +4,11 @@ Static marketing site for **SIMAK International** — a Dhaka-based trading comp
 
 ## Stack
 
-- HTML + CSS + vanilla JS
-- Tailwind CDN (utilities)
-- GSAP + ScrollTrigger
-- Lucide icons
+- HTML
+- CSS (`css/style.css`)
+- Vanilla JavaScript (`js/main.js`)
+
+No React, Tailwind, or animation libraries.
 
 ## Local preview
 
@@ -23,7 +24,7 @@ npx serve .
 |------|---------|
 | `index.html` | Landing |
 | `about.html` | About SIMAK |
-| `services.html` | Services (no catalog) |
+| `services.html` | Services |
 | `contact.html` | Contact |
 
 ## Deploy

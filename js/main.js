@@ -1,10 +1,6 @@
-/* SIMAK International — site interactions */
+/* SIMAK International — site interactions (vanilla JS only) */
 (function () {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function initIcons() {
-    if (window.lucide) window.lucide.createIcons();
-  }
 
   function initNav() {
     const shell = document.querySelector(".nav-shell");
@@ -24,11 +20,28 @@
     });
   }
 
-  function initPartners() {
-    const rail = document.querySelector(".partner-rail");
-    if (!rail || rail.dataset.duplicated) return;
-    rail.innerHTML += rail.innerHTML;
-    rail.dataset.duplicated = "true";
+  function initReveal() {
+    const items = document.querySelectorAll(".reveal");
+    if (!items.length) return;
+
+    if (prefersReduced || !("IntersectionObserver" in window)) {
+      items.forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    items.forEach((el) => observer.observe(el));
   }
 
   function initContactForm() {
@@ -51,87 +64,38 @@
         return;
       }
 
-      const subject = encodeURIComponent(`Inquiry from ${name} — SIMAK International`);
+      const subject = encodeURIComponent("Inquiry from " + name + " - SIMAK International");
       const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nOrganization: ${data.get("organization") || "—"}\nInterest: ${data.get("interest") || "—"}\n\n${message}`
+        "Name: " +
+          name +
+          "\nEmail: " +
+          email +
+          "\nOrganization: " +
+          (data.get("organization") || "-") +
+          "\nInterest: " +
+          (data.get("interest") || "-") +
+          "\n\n" +
+          message
       );
-      window.location.href = `mailto:simakint@yahoo.com?subject=${subject}&body=${body}`;
+      window.location.href = "mailto:simakint@yahoo.com?subject=" + subject + "&body=" + body;
 
       if (note) {
-        note.textContent = "Opening your email client… Thank you for reaching out.";
+        note.textContent = "Opening your email client. Thank you for reaching out.";
         note.className = "form-note success";
       }
       form.reset();
     });
   }
 
-  function initMotion() {
-    if (!window.gsap || prefersReduced) {
-      document.querySelectorAll(".reveal").forEach((el) => {
-        el.style.opacity = "1";
-        el.style.transform = "none";
-      });
-      return;
-    }
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    const heroItems = document.querySelectorAll(".hero-copy > * , .hero-visual");
-    if (heroItems.length) {
-      gsap.from(heroItems, {
-        opacity: 0,
-        y: 28,
-        duration: 0.85,
-        stagger: 0.1,
-        ease: "power3.out",
-        clearProps: "all",
-      });
-    }
-
-    document.querySelectorAll(".reveal").forEach((el) => {
-      gsap.to(el, {
-        opacity: 1,
-        y: 0,
-        duration: 0.75,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 88%",
-          toggleActions: "play none none none",
-        },
-      });
-    });
-
-    gsap.utils.toArray(".stat-value").forEach((el) => {
-      const raw = el.textContent.trim();
-      const match = raw.match(/^([^0-9]*)([0-9.]+)(.*)$/);
-      if (!match) return;
-      const prefix = match[1];
-      const target = parseFloat(match[2]);
-      const suffix = match[3];
-      const obj = { val: 0 };
-      gsap.to(obj, {
-        val: target,
-        duration: 1.4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          once: true,
-        },
-        onUpdate() {
-          const value = Number.isInteger(target) ? Math.round(obj.val) : obj.val.toFixed(0);
-          el.textContent = `${prefix}${value}${suffix}`;
-        },
-      });
-    });
+  function initYear() {
+    const year = document.getElementById("year");
+    if (year) year.textContent = String(new Date().getFullYear());
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    initIcons();
+    initYear();
     initNav();
-    initPartners();
+    initReveal();
     initContactForm();
-    initMotion();
   });
 })();
