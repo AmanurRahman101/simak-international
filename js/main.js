@@ -1,4 +1,4 @@
-/* SIMAK International — site interactions (vanilla JS only) */
+/* SIMAK International - site interactions (vanilla JS only) */
 (function () {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

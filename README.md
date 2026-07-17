@@ -1,6 +1,6 @@
 # SIMAK International Website
 
-Static marketing site for **SIMAK International** — a Dhaka-based trading company.
+Static marketing site for **SIMAK International** - a Dhaka-based trading company.
 
 ## Stack
 
