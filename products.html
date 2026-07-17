@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products — Genesis Trading Co.</title>
+    <meta
+      name="description"
+      content="Featured diagnostics, imaging, dialysis, and life-support platforms imported by Genesis Trading Co. for Bangladesh hospitals and labs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-shell">
+          <a class="brand" href="index.html" aria-label="Genesis Trading Co. home">
+            <img class="brand-mark" src="images/logo-mark.svg" alt="" />
+            <span class="brand-text">
+              <strong>Genesis</strong>
+              <span>Trading Co.</span>
+            </span>
+          </a>
+          <nav class="nav-links" aria-label="Primary">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link is-active" href="products.html">Products</a>
+            <a class="nav-link" href="experience.html">Experience</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </nav>
+          <div class="nav-actions">
+            <a class="btn btn-secondary" href="experience.html">Our work</a>
+            <a class="btn btn-primary" href="contact.html">Request a quote</a>
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+              <i data-lucide="menu" width="18" height="18"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow reveal">Featured lineup</p>
+          <h1 class="reveal">Equipment we bring into Bangladesh.</h1>
+          <p class="lead reveal">
+            We are an importer — not an endless online catalog. Below is a curated set of platforms
+            and categories we actively supply to hospitals and laboratories.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0.5rem">
+        <div class="container">
+          <div class="filter-bar" id="filter-bar" role="tablist" aria-label="Product categories">
+            <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="diagnostics">Diagnostics</button>
+            <button class="filter-btn" type="button" data-filter="imaging">Imaging</button>
+            <button class="filter-btn" type="button" data-filter="dialysis">Dialysis</button>
+            <button class="filter-btn" type="button" data-filter="life-support">Life support</button>
+          </div>
+          <div class="catalog-grid" id="catalog-grid"></div>
+          <div class="btn-group" style="margin-top: 2.5rem">
+            <a class="btn btn-primary" href="contact.html">Ask about availability</a>
+            <a class="btn btn-secondary" href="experience.html">See where we install</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <img class="brand-mark" src="images/logo-mark.svg" alt="" />
+              <span class="brand-text">
+                <strong>Genesis</strong>
+                <span>Trading Co.</span>
+              </span>
+            </a>
+            <p>A newer approach to health technology. Importer and distributor of medical equipment across Bangladesh since 2015.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Focus areas</h4>
+            <a href="products.html">Diagnostics</a>
+            <a href="products.html">Imaging</a>
+            <a href="products.html">Dialysis</a>
+            <a href="products.html">Life support</a>
+          </div>
+          <div class="footer-col">
+            <h4>Dhaka HQ</h4>
+            <a href="contact.html">Request a meeting</a>
+            <a href="mailto:info@genesistradingbd.com">info@genesistradingbd.com</a>
+            <a href="tel:+8801700000000">+880 17XX-XXXXXX</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Genesis Trading Co. All rights reserved.</p>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" width="16" height="16"></i></a>
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook" width="16" height="16"></i></a>
+            <a href="#" aria-label="Email"><i data-lucide="mail" width="16" height="16"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>
