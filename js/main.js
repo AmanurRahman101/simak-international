@@ -1,4 +1,4 @@
-/* Genesis Trading Co. — site interactions */
+/* SIMAK International — site interactions */
 (function () {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -51,11 +51,11 @@
         return;
       }
 
-      const subject = encodeURIComponent(`Inquiry from ${name} — Genesis Trading Co.`);
+      const subject = encodeURIComponent(`Inquiry from ${name} — SIMAK International`);
       const body = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nOrganization: ${data.get("organization") || "—"}\nInterest: ${data.get("interest") || "—"}\n\n${message}`
       );
-      window.location.href = `mailto:info@genesistradingbd.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:simakint@yahoo.com?subject=${subject}&body=${body}`;
 
       if (note) {
         note.textContent = "Opening your email client… Thank you for reaching out.";

@@ -1,6 +1,6 @@
-# Genesis Trading Co. Website
+# SIMAK International Website
 
-Static marketing site for Genesis Trading Co. — a Dhaka-based medical equipment importer (est. 2015).
+Static marketing site for **SIMAK International** — a Dhaka-based trading company.
 
 ## Stack
 
@@ -22,10 +22,9 @@ npx serve .
 | File | Purpose |
 |------|---------|
 | `index.html` | Landing |
-| `about.html` | Company story |
-| `products.html` | Featured equipment |
-| `experience.html` | Installations & customers |
-| `contact.html` | Quote request |
+| `about.html` | About SIMAK |
+| `services.html` | Services (no catalog) |
+| `contact.html` | Contact |
 
 ## Deploy
 

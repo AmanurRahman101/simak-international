@@ -1,4 +1,4 @@
-/* Genesis Trading Co. — clinical SaaS design system */
+/* SIMAK International — clinical SaaS design system */
 :root {
   --cyan: #69cbb2;
   --cyan-deep: #2a9b85;
@@ -222,36 +222,23 @@ p {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
   flex-shrink: 0;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
+.brand-logo {
+  height: 44px;
+  width: auto;
+  max-width: min(220px, 52vw);
+  object-fit: contain;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-
-.brand-text strong {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.brand-text span {
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
+.footer-brand .brand-logo {
+  height: 52px;
+  max-width: 260px;
+  /* Keep logo readable on dark footer */
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.35rem 0.55rem;
 }
 
 .nav-links {
@@ -577,7 +564,7 @@ p {
   font-size: 0.95rem;
 }
 
-/* Featured customer — Police Hospital */
+/* Spotlight panel */
 .spotlight {
   padding: 1rem 0 5rem;
 }
@@ -1037,11 +1024,6 @@ p {
   margin-top: 1rem;
 }
 
-.footer-brand .brand-text strong,
-.footer-brand .brand-text span {
-  color: #fff;
-}
-
 .footer-col h4 {
   color: #fff;
   font-size: 0.88rem;
@@ -1173,8 +1155,8 @@ p {
     padding: 2rem 1.35rem;
   }
 
-  .brand-text span {
-    display: none;
+  .brand-logo {
+    height: 38px;
   }
 }
 
