@@ -1,0 +1,6 @@
+{
+  "name": "SIMAK International",
+  "description": "Trading company and medical equipment indentor based in Dhaka, Bangladesh, supporting import, export, and healthcare partner coordination with an interactive equipment catalogue.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -605,13 +605,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.resetSimakFilters = resetAllFilters;
 
+  // Non-blocking toast notification helper (iframe safe)
+  function showSimakToast(message, type = 'info') {
+    let toast = document.getElementById('simak-global-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'simak-global-toast';
+      toast.style.cssText = `
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: #0f2422;
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(15, 36, 34, 0.25);
+        border-left: 4px solid #69cbb2;
+        font-family: var(--font-body, Figtree, sans-serif);
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 9999;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none;
+      `;
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateY(0)';
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateY(20px)';
+    }, 3200);
+  }
+  window.showSimakToast = showSimakToast;
+
   // Compare Functions
   window.toggleProductCompare = function(id) {
     if (state.comparedProducts.has(id)) {
       state.comparedProducts.delete(id);
     } else {
       if (state.comparedProducts.size >= 4) {
-        alert('You can compare a maximum of 4 products at a time.');
+        showSimakToast('You can compare a maximum of 4 products at a time.');
         renderProducts();
         return;
       }
@@ -648,7 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openCompareModal() {
     const ids = Array.from(state.comparedProducts);
     if (ids.length < 2) {
-      alert('Please select at least 2 products to compare specifications.');
+      showSimakToast('Please select at least 2 products to compare specifications.');
       return;
     }
     const products = ids.map(id => state.products.find(p => p.id === id)).filter(Boolean);

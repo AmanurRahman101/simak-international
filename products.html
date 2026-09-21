@@ -3,66 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medical Equipment Catalogue | Simak International</title>
-  <meta name="description" content="Explore Simak International's comprehensive medical equipment catalogue. High-end CT scanners, MRI systems, ultrasound, endoscopy, patient monitors, and laboratory diagnostics in Bangladesh.">
+  <title>Medical Equipment & Diagnostic Catalogue | SIMAK International</title>
+  <meta name="description" content="Explore SIMAK International's official medical equipment catalogue in Bangladesh. Advanced CT scanners, MRI systems, ultrasound, endoscopy, ICU ventilators, patient monitors, and laboratory diagnostics.">
   
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Simak Base Styles & New Catalogue Styles -->
+  <!-- Simak Base Styles & Catalogue Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/catalogue.css">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
 </head>
 <body class="catalogue-page">
 
-  <!-- Top Notification Bar -->
+  <!-- Header -->
   <header class="site-header">
-    <div class="top-bar">
-      <div class="container top-bar-inner">
-        <div class="top-contact-info">
-          <span><i class="fas fa-phone-alt"></i> +880 2 9568721, +880 1711-542389</span>
-          <span><i class="fas fa-envelope"></i> info@simakinternational.com</span>
-          <span><i class="fas fa-map-marker-alt"></i> Topkhana Road, Segunbagicha, Dhaka-1000</span>
-        </div>
-        <div class="top-bar-links">
-          <a href="contact.html"><i class="fas fa-headset"></i> Tender Support</a>
-          <a href="about.html"><i class="fas fa-award"></i> Authorized Indenting</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Navigation Bar -->
-    <nav class="main-navbar">
-      <div class="container navbar-inner">
-        <a href="index.html" class="brand-logo">
-          <img src="images/logo.png" alt="Simak International Logo" class="logo-img" onerror="this.src='images/logo-source.png'">
-          <div class="logo-text">
-            <span class="company-name">SIMAK</span>
-            <span class="company-sub">INTERNATIONAL LTD.</span>
-          </div>
+    <div class="container">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="SIMAK International home">
+          <img class="brand-logo" src="images/logo.png" alt="SIMAK International" />
         </a>
-
-        <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item active"><a href="products.html" class="nav-link active">Products & Catalogue</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-        </ul>
-
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link is-active" href="products.html">Products</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
         <div class="nav-actions">
-          <a href="contact.html?type=quote" class="btn btn-primary-nav">
-            <i class="fas fa-file-contract"></i> Request Tender Quote
-          </a>
-          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
-            <i class="fas fa-bars"></i>
+          <a class="btn btn-secondary" href="services.html">Services</a>
+          <a class="btn btn-primary" href="contact.html">Get in touch</a>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
           </button>
         </div>
       </div>
-    </nav>
+    </div>
   </header>
 
   <!-- Breadcrumbs Bar -->
@@ -70,15 +53,16 @@
     <div class="container">
       <a href="index.html"><i class="fas fa-home"></i> Home</a>
       <span class="separator">/</span>
-      <span class="current">Products Catalogue</span>
+      <span class="current">Medical Equipment Catalogue</span>
     </div>
   </div>
 
   <!-- Catalogue Header Banner -->
   <section class="catalogue-header-banner">
     <div class="container">
+      <p class="eyebrow" style="color: #69cbb2; margin-bottom: 0.5rem;">Official Indentor & Healthcare Technology Partner</p>
       <h1>Medical Equipment & Diagnostic Catalogue</h1>
-      <p>Official indentor and distributor of premium healthcare technology in Bangladesh. Filter, compare, and request official institutional quotations across global brands including Canon, Mindray, Olympus, Boditech, and Unimed.</p>
+      <p>Authorized distributor and indenting partner in Bangladesh for world-class medical equipment. Browse high-resolution specifications, compare systems, and request official institutional quotations across Canon, Mindray, Olympus, Boditech, Esaote, and Unimed.</p>
     </div>
   </section>
 
@@ -321,7 +305,10 @@
         <button type="button" class="modal-close-icon" onclick="window.closeQuoteModal()">&times;</button>
       </div>
       <div class="modal-body-content">
-        <form onsubmit="event.preventDefault(); alert('Thank you! Your quotation request has been received. Our sales engineer will contact your institution shortly.'); window.closeQuoteModal();">
+        <div id="catalog-quote-success-notice" style="display: none; background: #e6f7f2; border: 1px solid #69cbb2; color: #1a6f5f; padding: 14px; border-radius: 8px; margin-bottom: 16px; font-weight: 600; text-align: center;">
+          <i class="fas fa-check-circle mr-1"></i> Thank you! Your quotation request has been received. Our sales engineer will contact your institution shortly.
+        </div>
+        <form onsubmit="event.preventDefault(); document.getElementById('catalog-quote-success-notice').style.display = 'block'; setTimeout(() => { window.closeQuoteModal(); document.getElementById('catalog-quote-success-notice').style.display = 'none'; }, 2200);">
           <div class="form-group mb-3">
             <label class="font-weight-bold" style="font-size: 13px;">Requested Equipment</label>
             <input type="text" class="form-control" id="quote-product-name" readonly style="background: #f8fafc; font-weight: 600;">
@@ -368,56 +355,43 @@
 
   <!-- Footer Section (Consistent with Simak International) -->
   <footer class="site-footer">
-    <div class="container footer-top">
-      <div class="footer-grid">
-        <div class="footer-col footer-about">
-          <div class="footer-logo mb-3">
-            <span class="font-weight-bold text-white" style="font-size: 20px;">SIMAK INTERNATIONAL LTD.</span>
-          </div>
-          <p>Premier medical equipment supply, clinical engineering, and indenting partner in Bangladesh. Delivering cutting-edge diagnostic solutions and turnkey healthcare technology.</p>
-          <div class="footer-social-links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          </div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img class="brand-logo" src="images/logo.png" alt="SIMAK International" />
+          </a>
+          <p>SIMAK International - trading, medical equipment indenting, and partner coordination from Dhaka, Bangladesh.</p>
         </div>
-
         <div class="footer-col">
-          <h4>Product Catalogue</h4>
-          <ul class="footer-links">
-            <li><a href="products.html?category=radiology">Radiology & CT / MRI</a></li>
-            <li><a href="products.html?category=ultrasound">Ultrasound Systems</a></li>
-            <li><a href="products.html?category=endoscopy">Endoscopy & EBUS</a></li>
-            <li><a href="products.html?category=critical-care">Ventilators & ICU Monitors</a></li>
-            <li><a href="products.html?category=laboratory">In-Vitro Diagnostics (IVD)</a></li>
-          </ul>
+          <h4>Explore</h4>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
         </div>
-
         <div class="footer-col">
-          <h4>Company Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Simak</a></li>
-            <li><a href="services.html">Engineering & Services</a></li>
-            <li><a href="products.html">Equipment Catalogue</a></li>
-            <li><a href="contact.html">Contact & Support</a></li>
-          </ul>
+          <h4>Focus</h4>
+          <a href="services.html">Import</a>
+          <a href="services.html">Export</a>
+          <a href="services.html">Partnerships</a>
         </div>
-
         <div class="footer-col">
-          <h4>Corporate Headquarters</h4>
-          <p class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Topkhana Road, Segunbagicha, Dhaka-1000, Bangladesh</p>
-          <p class="footer-contact-item"><i class="fas fa-phone-alt"></i> +880 2 9568721</p>
-          <p class="footer-contact-item"><i class="fas fa-envelope"></i> info@simakinternational.com</p>
-          <p class="footer-contact-item"><i class="fas fa-clock"></i> Sun - Thu: 9:00 AM - 6:00 PM</p>
+          <h4>Dhaka</h4>
+          <a href="contact.html">Motijheel C/A</a>
+          <a href="mailto:simakint@yahoo.com">simakint@yahoo.com</a>
         </div>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p>&copy; 2026 Simak International Ltd. All rights reserved.</p>
-        <p class="text-muted" style="font-size: 12px;">Authorized Distributor & Healthcare Technology Solution Provider</p>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> SIMAK International. All rights reserved.</p>
+        <div class="socials">
+          <a href="mailto:simakint@yahoo.com" aria-label="Email">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -425,5 +399,6 @@
   <!-- Scripts -->
   <script src="js/products-data.js"></script>
   <script src="js/catalogue.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

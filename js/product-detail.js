@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mainImg) {
       mainImg.src = p.image;
       mainImg.alt = p.name;
+      mainImg.onerror = function() { this.src = 'images/logo.png'; };
     }
 
     // Title & Tags

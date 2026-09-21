@@ -1222,6 +1222,40 @@ const PRODUCTS_DATA = [
       "Reagents": "Open reagent system - compatible with all international & local brands",
       "Screen": "7-inch color LCD display with internal thermal printer"
     }
+  },
+  {
+    id: 37,
+    name: "Esaote Magnifico Open 0.4T Dedicated MSK & Spine MRI System",
+    model: "Magnifico Open 0.4T",
+    brand: "Esaote",
+    brandSlug: "esaote",
+    category: "radiology",
+    categoryName: "Radiology & Medical Imaging",
+    subCategory: "MRI Systems",
+    image: "images/products/esaote-magnifico-open-04t.png",
+    price: 38000000,
+    priceFormatted: "৳ 3,80,00,000",
+    priceDisplay: "Price on Request",
+    availability: "available-on-order",
+    availabilityText: "Available on Order",
+    rating: 4.9,
+    reviewsCount: 11,
+    keyFeatures: [
+      "Open C-shaped permanent magnet design eliminating patient claustrophobia",
+      "0.4 Tesla field strength optimized for musculoskeletal and spine diagnostics",
+      "True-Motion real-time kinematic joint imaging under continuous movement",
+      "Eco-friendly zero cryogen design with minimal power consumption"
+    ],
+    overview: "The Esaote Magnifico Open delivers high-resolution musculoskeletal and whole-spine MR imaging with unmatched patient comfort. Its open architecture prevents claustrophobic refusal and enables specialized weight-bearing examinations.",
+    specifications: {
+      "Manufacturer": "Esaote S.p.A. (Genoa, Italy)",
+      "Magnet Type": "Permanent open C-shaped magnet - zero helium refilling required",
+      "Field Strength": "0.4 Tesla nominal field",
+      "Patient Clearance": "Wide open aperture with unobstructed 360-degree patient visibility",
+      "Gradient System": "High-performance gradients with Speed-Up parallel imaging",
+      "RF Coils": "Dedicated multi-channel anatomically contoured coils for knee, shoulder, spine, wrist, and ankle",
+      "Power Requirements": "Standard electrical connection, low operational expenditure"
+    }
   }
 ];
 
@@ -1233,6 +1267,7 @@ const BRANDS_DATA = [
   { id: "unimed", name: "Unimed", count: 14, logo: "images/partners/unimed.png" },
   { id: "boditech", name: "Boditech Med", count: 2, logo: "images/partners/boditech.png" },
   { id: "alcor", name: "Alcor Scientific", count: 2, logo: "images/partners/alcor-scientific.png" },
+  { id: "esaote", name: "Esaote", count: 1, logo: "images/partners/esaote.png" },
   { id: "ecoray", name: "EcoRay", count: 1, logo: "images/partners/ecoray.png" },
   { id: "gemss", name: "GEMSS Medical", count: 1, logo: "images/partners/gemss.png" },
   { id: "eurospital", name: "Eurospital", count: 1, logo: "images/partners/eurospital.png" },
@@ -1241,8 +1276,8 @@ const BRANDS_DATA = [
 
 // Categories Metadata
 const CATEGORIES_DATA = [
-  { id: "all", name: "All Categories", count: 36, icon: "fas fa-th-large" },
-  { id: "radiology", name: "Radiology & Medical Imaging", count: 7, icon: "fas fa-x-ray" },
+  { id: "all", name: "All Categories", count: 37, icon: "fas fa-th-large" },
+  { id: "radiology", name: "Radiology & Medical Imaging", count: 8, icon: "fas fa-x-ray" },
   { id: "ultrasound", name: "Ultrasound & Diagnostic Systems", count: 5, icon: "fas fa-wave-square" },
   { id: "endoscopy", name: "Surgical & Endoscopy Solutions", count: 3, icon: "fas fa-procedures" },
   { id: "critical-care", name: "Critical Care & Patient Monitoring", count: 5, icon: "fas fa-heartbeat" },

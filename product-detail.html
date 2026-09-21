@@ -3,58 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details | Simak International</title>
+  <title>Product Details | SIMAK International</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/catalogue.css">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
 </head>
 <body class="catalogue-page">
 
   <!-- Header -->
   <header class="site-header">
-    <div class="top-bar">
-      <div class="container top-bar-inner">
-        <div class="top-contact-info">
-          <span><i class="fas fa-phone-alt"></i> +880 2 9568721, +880 1711-542389</span>
-          <span><i class="fas fa-envelope"></i> info@simakinternational.com</span>
-          <span><i class="fas fa-map-marker-alt"></i> Topkhana Road, Segunbagicha, Dhaka-1000</span>
+    <div class="container">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="SIMAK International home">
+          <img class="brand-logo" src="images/logo.png" alt="SIMAK International" />
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link is-active" href="products.html">Products</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="products.html">Back to Catalogue</a>
+          <a class="btn btn-primary" href="contact.html">Get in touch</a>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
-
-    <nav class="main-navbar">
-      <div class="container navbar-inner">
-        <a href="index.html" class="brand-logo">
-          <img src="images/logo.png" alt="Simak International Logo" class="logo-img" onerror="this.src='images/logo-source.png'">
-          <div class="logo-text">
-            <span class="company-name">SIMAK</span>
-            <span class="company-sub">INTERNATIONAL LTD.</span>
-          </div>
-        </a>
-
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item active"><a href="products.html" class="nav-link active">Products & Catalogue</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-        </ul>
-
-        <div class="nav-actions">
-          <a href="products.html" class="btn btn-outline-secondary">
-            <i class="fas fa-th-large"></i> Back to Catalogue
-          </a>
-        </div>
-      </div>
-    </nav>
   </header>
 
-  <!-- Breadcrumbs Bar (Star Tech Style) -->
+  <!-- Breadcrumbs Bar -->
   <div class="catalogue-breadcrumbs">
     <div class="container">
       <a href="index.html"><i class="fas fa-home"></i> Home</a>
@@ -68,59 +59,59 @@
   </div>
 
   <!-- Main Product Detail View -->
-  <main class="container my-4">
-    <div class="card p-4 border-0 shadow-sm rounded-lg mb-4" style="background: #ffffff;">
-      <div class="row">
+  <main class="container my-4" style="margin-top: 2rem; margin-bottom: 3rem;">
+    <div class="card p-4 border-0 shadow-sm rounded-lg mb-4" style="background: #ffffff; border-radius: 16px; border: 1px solid var(--border-color); padding: 28px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
         <!-- Left: Product Photo & Badges -->
-        <div class="col-lg-5 mb-4 mb-lg-0">
-          <div class="detail-img-box p-4 border rounded text-center" style="height: 380px; display: flex; align-items: center; justify-content: center; background: #fafbfc;">
+        <div>
+          <div class="detail-img-box p-4 rounded text-center" style="height: 380px; display: flex; align-items: center; justify-content: center; background: #f8fcfb; border: 1px solid var(--border-color); border-radius: 12px;">
             <img id="detail-main-img" src="" alt="" style="max-height: 100%; max-width: 100%; object-fit: contain;">
           </div>
-          <div class="row mt-3 text-center" style="font-size: 13px;">
-            <div class="col-6">
-              <span class="text-muted">Brand Partner:</span><br>
-              <strong id="detail-brand" style="color: var(--primary-color);"></strong>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; text-align: center; font-size: 13px;">
+            <div style="background: #f2fbf8; padding: 10px; border-radius: 8px; border: 1px solid #d5e8e3;">
+              <span style="color: var(--muted-text);">Brand Partner:</span><br>
+              <strong id="detail-brand" style="color: var(--primary-color); font-size: 14px;"></strong>
             </div>
-            <div class="col-6">
-              <span class="text-muted">Equipment Model:</span><br>
-              <strong id="detail-model" style="color: var(--primary-color);"></strong>
+            <div style="background: #f2fbf8; padding: 10px; border-radius: 8px; border: 1px solid #d5e8e3;">
+              <span style="color: var(--muted-text);">Equipment Model:</span><br>
+              <strong id="detail-model" style="color: var(--primary-color); font-size: 14px;"></strong>
             </div>
           </div>
         </div>
 
-        <!-- Right: Star Tech Style Specs, Price & CTA -->
-        <div class="col-lg-7">
-          <h1 id="detail-title" class="font-weight-bold" style="font-size: 24px; color: var(--primary-color); margin-bottom: 12px;"></h1>
+        <!-- Right: Specs, Price & CTA -->
+        <div>
+          <h1 id="detail-title" style="font-family: var(--font-display, 'Sora', sans-serif); font-size: 24px; color: var(--primary-color); margin-bottom: 12px; font-weight: 700;"></h1>
           
-          <div class="d-flex align-items-center mb-3" style="font-size: 13px;">
-            <span class="mr-3">Status: <span id="detail-avail" class="badge badge-success"></span></span>
-            <span class="mr-3 text-muted">|</span>
-            <span class="text-muted"><i class="fas fa-certificate text-info mr-1"></i> Authorized Indenting / Importation</span>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 13px;">
+            <span>Status: <span id="detail-avail" class="badge badge-success" style="padding: 4px 10px; border-radius: 6px; font-weight: 600;"></span></span>
+            <span style="color: #cbd5e1;">|</span>
+            <span style="color: var(--muted-text);"><i class="fas fa-certificate mr-1" style="color: var(--accent-color);"></i> Authorized Indenting / Importation</span>
           </div>
 
           <!-- Price Panel -->
-          <div class="p-3 mb-3 rounded" style="background: #f8fafc; border-left: 4px solid var(--accent-color);">
-            <div class="text-muted small text-uppercase font-weight-bold">Institutional / Hospital Price</div>
-            <div id="detail-price" class="font-weight-bold" style="font-size: 28px; color: var(--accent-color);"></div>
-            <div class="text-success small font-weight-bold mt-1">
+          <div style="background: #f2fbf8; border-left: 4px solid var(--primary-color); padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 20px;">
+            <div style="font-size: 11px; text-transform: uppercase; color: var(--muted-text); font-weight: 600; letter-spacing: 0.5px;">Institutional / Hospital Quotation</div>
+            <div id="detail-price" style="font-family: var(--font-display, 'Sora', sans-serif); font-size: 28px; font-weight: 800; color: var(--primary-color); margin: 4px 0;"></div>
+            <div style="color: #16a34a; font-size: 12px; font-weight: 600;">
               <i class="fas fa-truck mr-1"></i> Includes Official Delivery, Custom Clearance, Calibration & 1 Year Manufacturer Warranty
             </div>
           </div>
 
-          <!-- Key Highlights (Star Tech Signature) -->
-          <div class="mb-4">
-            <h5 class="font-weight-bold" style="font-size: 15px; color: var(--primary-color);">Key Features:</h5>
-            <ul id="detail-key-features" class="list-unstyled mb-0" style="font-size: 14px; line-height: 1.8;">
+          <!-- Key Highlights -->
+          <div style="margin-bottom: 24px;">
+            <h5 style="font-family: var(--font-display, 'Sora', sans-serif); font-size: 14px; color: var(--primary-color); margin-bottom: 10px; text-transform: uppercase; font-weight: 700;">Key Features:</h5>
+            <ul id="detail-key-features" style="list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.9;">
               <!-- Populated by JS -->
             </ul>
           </div>
 
           <!-- Action Buttons -->
-          <div class="d-flex flex-wrap gap-2">
-            <button type="button" class="btn btn-lg font-weight-bold mr-2 text-white" id="btn-open-quote-modal" style="background: var(--accent-color);">
-              <i class="fas fa-file-invoice-dollar mr-1"></i> Request Tender Quotation
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <button type="button" class="btn btn-primary" id="btn-open-quote-modal" style="cursor: pointer;">
+              <i class="fas fa-file-invoice-dollar mr-1"></i> Request Official Quotation
             </button>
-            <a href="contact.html" class="btn btn-lg btn-outline-primary font-weight-bold">
+            <a href="contact.html" class="btn btn-secondary">
               <i class="fas fa-comments mr-1"></i> Speak with Biomedical Engineer
             </a>
           </div>
@@ -129,17 +120,17 @@
     </div>
 
     <!-- Tabbed Information: Specs & Overview -->
-    <div class="card p-4 border-0 shadow-sm rounded-lg mb-4" style="background: #ffffff;">
-      <h3 class="font-weight-bold mb-3" style="font-size: 18px; color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px;">
-        <i class="fas fa-info-circle text-secondary mr-1"></i> Clinical Overview & Description
+    <div class="card p-4 border-0 shadow-sm rounded-lg mb-4" style="background: #ffffff; border-radius: 16px; border: 1px solid var(--border-color); padding: 28px; margin-top: 24px;">
+      <h3 style="font-family: var(--font-display, 'Sora', sans-serif); font-size: 18px; color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; margin-bottom: 14px;">
+        <i class="fas fa-info-circle mr-1" style="color: var(--accent-color);"></i> Clinical Overview & Description
       </h3>
-      <p id="detail-overview" class="text-muted" style="font-size: 15px; line-height: 1.7;"></p>
+      <p id="detail-overview" style="color: var(--muted-text); font-size: 15px; line-height: 1.7; margin-bottom: 28px;"></p>
 
-      <h3 class="font-weight-bold mt-4 mb-3" style="font-size: 18px; color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px;">
-        <i class="fas fa-list-ul text-secondary mr-1"></i> Technical Specifications
+      <h3 style="font-family: var(--font-display, 'Sora', sans-serif); font-size: 18px; color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; margin-bottom: 14px;">
+        <i class="fas fa-list-ul mr-1" style="color: var(--accent-color);"></i> Technical Specifications
       </h3>
-      <div class="table-responsive">
-        <table class="table table-bordered specs-table">
+      <div style="overflow-x: auto;">
+        <table class="specs-table">
           <tbody id="detail-specs-tbody">
             <!-- Populated by JS -->
           </tbody>
@@ -148,9 +139,9 @@
     </div>
 
     <!-- Related Products Section -->
-    <div class="mt-5">
-      <h3 class="font-weight-bold mb-3" style="font-size: 20px; color: var(--primary-color);">
-        <i class="fas fa-cubes text-secondary mr-1"></i> Related Equipment in this Category
+    <div style="margin-top: 36px;">
+      <h3 style="font-family: var(--font-display, 'Sora', sans-serif); font-size: 20px; color: var(--primary-color); margin-bottom: 16px;">
+        <i class="fas fa-cubes mr-1" style="color: var(--accent-color);"></i> Related Equipment in this Category
       </h3>
       <div class="products-grid grid-view" id="related-products-grid">
         <!-- Populated by JS -->
@@ -162,31 +153,34 @@
   <div class="modal-overlay" id="quote-modal">
     <div class="modal-box" style="max-width: 580px;">
       <div class="modal-header-bar">
-        <h3><i class="fas fa-file-invoice-dollar text-warning mr-2"></i> Request Official Quotation</h3>
+        <h3><i class="fas fa-file-invoice-dollar mr-2" style="color: var(--accent-color);"></i> Request Official Quotation</h3>
         <button type="button" class="modal-close-icon" onclick="window.closeQuoteModal()">&times;</button>
       </div>
       <div class="modal-body-content">
-        <form onsubmit="event.preventDefault(); alert('Quotation request submitted successfully!'); window.closeQuoteModal();">
-          <div class="form-group mb-3">
-            <label class="font-weight-bold" style="font-size: 13px;">Requested Equipment</label>
-            <input type="text" class="form-control" id="quote-product-name" readonly style="background: #f8fafc; font-weight: 600;">
+        <div id="quote-success-notice" style="display: none; background: #e6f7f2; border: 1px solid #69cbb2; color: #1a6f5f; padding: 14px; border-radius: 8px; margin-bottom: 16px; font-weight: 600; text-align: center;">
+          <i class="fas fa-check-circle mr-1"></i> Thank you! Your quotation request has been received. Our clinical procurement team will contact you shortly.
+        </div>
+        <form id="quote-detail-form" onsubmit="event.preventDefault(); document.getElementById('quote-success-notice').style.display = 'block'; setTimeout(() => { window.closeQuoteModal(); document.getElementById('quote-success-notice').style.display = 'none'; }, 2200);">
+          <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px;">Requested Equipment</label>
+            <input type="text" id="quote-product-name" readonly style="width: 100%; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; background: #f8fafc; font-weight: 600;">
           </div>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="font-weight-bold" style="font-size: 13px;">Hospital / Clinic Name *</label>
-              <input type="text" class="form-control" placeholder="Hospital Name" required>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+            <div>
+              <label style="display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px;">Hospital / Clinic Name *</label>
+              <input type="text" placeholder="Hospital Name" required style="width: 100%; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px;">
             </div>
-            <div class="col-md-6">
-              <label class="font-weight-bold" style="font-size: 13px;">Contact Mobile *</label>
-              <input type="tel" class="form-control" placeholder="+880 1..." required>
+            <div>
+              <label style="display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px;">Contact Mobile *</label>
+              <input type="tel" placeholder="+880 1..." required style="width: 100%; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px;">
             </div>
           </div>
-          <div class="form-group mb-3">
-            <label class="font-weight-bold" style="font-size: 13px;">Official Email *</label>
-            <input type="email" class="form-control" placeholder="contact@hospital.com" required>
+          <div style="margin-bottom: 18px;">
+            <label style="display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px;">Official Email *</label>
+            <input type="email" placeholder="contact@hospital.com" required style="width: 100%; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px;">
           </div>
-          <button type="submit" class="btn btn-block btn-lg font-weight-bold text-white" style="background: var(--accent-color); border: none;">
-            Submit Request
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; cursor: pointer;">
+            Submit Quotation Request
           </button>
         </form>
       </div>
@@ -195,13 +189,50 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-bottom text-center py-4">
-      <p>&copy; 2026 Simak International Ltd. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img class="brand-logo" src="images/logo.png" alt="SIMAK International" />
+          </a>
+          <p>SIMAK International - trading, medical equipment indenting, and partner coordination from Dhaka, Bangladesh.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Focus</h4>
+          <a href="services.html">Import</a>
+          <a href="services.html">Export</a>
+          <a href="services.html">Partnerships</a>
+        </div>
+        <div class="footer-col">
+          <h4>Dhaka</h4>
+          <a href="contact.html">Motijheel C/A</a>
+          <a href="mailto:simakint@yahoo.com">simakint@yahoo.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> SIMAK International. All rights reserved.</p>
+        <div class="socials">
+          <a href="mailto:simakint@yahoo.com" aria-label="Email">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script src="js/products-data.js"></script>
   <script src="js/catalogue.js"></script>
   <script src="js/product-detail.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
