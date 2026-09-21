@@ -1,0 +1,1375 @@
+/* ========================================================
+   SIMAK INTERNATIONAL - STAR TECH STYLE PRODUCT CATALOGUE
+   ======================================================== */
+
+:root {
+  --primary-color: #0b2545;       /* Simak Navy */
+  --primary-hover: #133b5c;
+  --accent-color: #ef4a23;        /* Star Tech Orange / Red Accent */
+  --accent-hover: #d83d18;
+  --secondary-color: #00a896;     /* Simak Medical Teal */
+  --secondary-hover: #028090;
+  --dark-text: #1f2937;
+  --muted-text: #6b7280;
+  --light-bg: #f2f4f8;           /* Star Tech Page Background */
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --border-radius: 8px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.catalogue-page {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* Breadcrumb Navigation */
+.catalogue-breadcrumbs {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 0;
+  font-size: 13px;
+  color: var(--muted-text);
+}
+.catalogue-breadcrumbs a {
+  color: var(--muted-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.catalogue-breadcrumbs a:hover {
+  color: var(--accent-color);
+}
+.catalogue-breadcrumbs .separator {
+  margin: 0 8px;
+  color: #cbd5e1;
+}
+.catalogue-breadcrumbs .current {
+  color: var(--dark-text);
+  font-weight: 600;
+}
+
+/* Page Header & Intro */
+.catalogue-header-banner {
+  background: linear-gradient(135deg, #0b2545 0%, #133b5c 100%);
+  color: #ffffff;
+  padding: 36px 0;
+  margin-bottom: 24px;
+}
+.catalogue-header-banner h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.catalogue-header-banner p {
+  color: #cbd5e1;
+  font-size: 15px;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* Main Layout Grid */
+.catalogue-main-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* Sidebar Styling (Star Tech Style) */
+.catalogue-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-card-header {
+  padding: 14px 18px;
+  background: #fafbfc;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-card-header h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.filter-card-body {
+  padding: 16px 18px;
+}
+
+/* Filter Item Lists */
+.filter-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+.filter-item-list::-webkit-scrollbar {
+  width: 5px;
+}
+.filter-item-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.filter-item {
+  padding: 6px 0;
+  font-size: 13px;
+  transition: var(--transition);
+}
+.filter-item.active .filter-label {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.custom-radio,
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  user-select: none;
+}
+.custom-radio input,
+.custom-checkbox input {
+  display: none;
+}
+
+.radio-mark,
+.checkbox-mark {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #94a3b8;
+  margin-right: 10px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  background: #ffffff;
+}
+.radio-mark {
+  border-radius: 50%;
+}
+.checkbox-mark {
+  border-radius: 3px;
+}
+
+.custom-radio input:checked + .radio-mark {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+  box-shadow: inset 0 0 0 3px #ffffff;
+}
+.custom-checkbox input:checked + .checkbox-mark {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+}
+.custom-checkbox input:checked + .checkbox-mark::after {
+  content: "✓";
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.filter-label {
+  flex: 1;
+  color: var(--dark-text);
+}
+.filter-label .cat-icon {
+  margin-right: 6px;
+  color: var(--secondary-color);
+  width: 16px;
+  text-align: center;
+}
+.filter-count {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.no-filter-match {
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* Brand Filter Search Box */
+.brand-search-box {
+  margin-bottom: 12px;
+  position: relative;
+}
+.brand-search-box input {
+  width: 100%;
+  padding: 8px 12px 8px 30px;
+  font-size: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+}
+.brand-search-box input:focus {
+  border-color: var(--secondary-color);
+}
+.brand-search-box i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* Availability Status Dots */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.status-dot.in-stock {
+  background-color: #10b981;
+}
+.status-dot.on-order {
+  background-color: #f59e0b;
+}
+
+/* Price Range Slider (Star Tech Style) */
+.price-filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.price-inputs-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.price-input-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.price-input-group span {
+  color: #64748b;
+  font-size: 12px;
+  margin-right: 4px;
+}
+.price-input-group input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark-text);
+  outline: none;
+}
+.price-range-slider {
+  width: 100%;
+  accent-color: var(--accent-color);
+  cursor: pointer;
+}
+.btn-apply-price {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-apply-price:hover {
+  background: var(--accent-color);
+}
+
+/* Clear All Button */
+.btn-clear-filters {
+  background: #ffffff;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 10px 16px;
+  border-radius: var(--border-radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+.btn-clear-filters:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+/* Close button for Mobile Sidebar */
+.close-sidebar-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+/* ========================================================
+   CATALOGUE MAIN CONTENT AREA
+   ======================================================== */
+.catalogue-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Top Action & Sort Bar (Star Tech Style) */
+.catalogue-top-bar {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 12px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.total-product-info {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.view-mode-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2px;
+  background: #f8fafc;
+}
+.view-btn {
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  font-size: 13px;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: var(--transition);
+}
+.view-btn.active {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.mobile-filter-btn {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.top-bar-center {
+  flex: 1;
+  max-width: 320px;
+  min-width: 200px;
+}
+.catalogue-search-wrapper {
+  position: relative;
+}
+.catalogue-search-wrapper input {
+  width: 100%;
+  padding: 8px 36px 8px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+  transition: var(--transition);
+}
+.catalogue-search-wrapper input:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.15);
+}
+.catalogue-search-wrapper i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748b;
+}
+.control-group select {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--dark-text);
+  outline: none;
+  cursor: pointer;
+}
+.control-group select:focus {
+  border-color: var(--secondary-color);
+}
+
+/* Active Filters Pills Bar */
+.active-filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 12px;
+}
+.active-filters-title {
+  font-weight: 600;
+  color: #64748b;
+  margin-right: 4px;
+}
+.filter-pill {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: var(--dark-text);
+  padding: 4px 8px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.filter-pill .remove-pill {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+.btn-clear-all-inline {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* ========================================================
+   STAR TECH PRODUCT CARD DESIGN
+   ======================================================== */
+.products-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Grid View: 3 columns */
+.products-grid.grid-view {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.startech-product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+.startech-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+/* Card Thumb Frame */
+.startech-product-card .product-thumb {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  overflow: hidden;
+}
+.startech-product-card .thumb-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.startech-product-card .product-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+.startech-product-card:hover .product-thumb img {
+  transform: scale(1.06);
+}
+
+/* Brand & Availability Badges */
+.brand-pill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(11, 37, 69, 0.9);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+}
+
+.avail-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.avail-badge.badge-in-stock {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+.avail-badge.badge-on-order {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+/* Card Body Information */
+.startech-product-card .product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-category-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+  min-height: 40px;
+}
+.product-title a {
+  color: var(--dark-text);
+  text-decoration: none;
+  transition: var(--transition);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.product-title a:hover {
+  color: var(--accent-color);
+}
+
+/* Star Tech Signature Key Features List */
+.key-features-list {
+  list-style: none;
+  padding: 8px 10px;
+  margin: 0 0 14px 0;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px dashed #e2e8f0;
+  font-size: 12px;
+  color: #475569;
+}
+.key-features-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+.key-features-list li:last-child {
+  margin-bottom: 0;
+}
+.key-features-list .feature-dot {
+  color: var(--accent-color);
+  font-size: 11px;
+  margin-right: 6px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Card Bottom Row */
+.card-bottom-row {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.price-box {
+  margin-bottom: 12px;
+}
+.price-caption {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 600;
+}
+.price-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color); /* Star Tech style bright price */
+  display: block;
+}
+.price-note {
+  font-size: 11px;
+  color: #10b981;
+  font-weight: 500;
+}
+
+/* Card Action Buttons */
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.btn-action {
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+.btn-view-details {
+  background: #f1f5f9;
+  color: var(--primary-color);
+  border: 1px solid #cbd5e1;
+}
+.btn-view-details:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+.btn-quote {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+.btn-quote:hover {
+  background: var(--accent-hover);
+}
+
+/* Compare Footer Row */
+.card-compare-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #94a3b8;
+  padding-top: 8px;
+  border-top: 1px solid #f8fafc;
+}
+.compare-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.compare-checkbox-label input {
+  display: none;
+}
+.compare-check {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 3px;
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+.compare-checkbox-label input:checked + .compare-check {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.compare-checkbox-label input:checked + .compare-check::after {
+  content: "✓";
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: bold;
+}
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.star-filled {
+  color: #f59e0b;
+}
+
+/* ========================================================
+   LIST VIEW MODE (Star Tech Style Horizontal Row)
+   ======================================================== */
+.products-grid.list-view {
+  grid-template-columns: 1fr;
+}
+
+.products-grid.list-view .startech-product-card {
+  flex-direction: row;
+}
+
+.products-grid.list-view .startech-product-card .product-thumb {
+  width: 260px;
+  height: auto;
+  min-height: 220px;
+  border-bottom: none;
+  border-right: 1px solid #f1f5f9;
+}
+
+.products-grid.list-view .startech-product-card .product-info {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.products-grid.list-view .card-bottom-row {
+  border-top: none;
+  border-left: 1px solid #f1f5f9;
+  padding-top: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.products-grid.list-view .card-actions {
+  grid-template-columns: 1fr;
+}
+
+.products-grid.list-view .card-compare-footer {
+  grid-column: span 2;
+}
+
+/* ========================================================
+   PAGINATION (Star Tech Style)
+   ======================================================== */
+.pagination-wrapper {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.page-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--dark-text);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.page-btn:hover:not(.disabled) {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.page-btn.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+}
+.page-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ========================================================
+   EMPTY STATE
+   ======================================================== */
+.empty-catalogue-state {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 48px 24px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+.empty-catalogue-state .empty-icon {
+  font-size: 48px;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+.empty-catalogue-state h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+.empty-catalogue-state p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ========================================================
+   COMPARE DRAWER (Sticky Bottom Bar)
+   ======================================================== */
+.compare-drawer {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  border-top: 2px solid var(--secondary-color);
+  padding: 12px 24px;
+  z-index: 1050;
+  transition: bottom 0.3s ease;
+}
+.compare-drawer.active {
+  bottom: 0;
+}
+.compare-drawer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.compare-drawer-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  overflow-x: auto;
+}
+.compare-drawer-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+.compare-items-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.compare-thumb-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  padding: 4px 10px 4px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.compare-thumb-pill img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.remove-compare-item {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.compare-drawer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-compare-action {
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-compare-action:hover {
+  background: var(--accent-hover);
+}
+.btn-clear-compare {
+  background: none;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ========================================================
+   MODALS (Product Detail & Compare & Quote)
+   ======================================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 37, 69, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.modal-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-box {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalScaleUp 0.3s ease;
+}
+.modal-box.modal-lg {
+  max-width: 1100px;
+}
+
+@keyframes modalScaleUp {
+  from { transform: scale(0.94); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header-bar {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafbfc;
+}
+.modal-header-bar h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+.modal-close-icon {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.modal-close-icon:hover {
+  color: var(--accent-color);
+}
+
+.modal-body-content {
+  padding: 24px;
+}
+
+/* Modal Product Layout */
+.modal-product-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+}
+
+.modal-product-left .main-image-frame {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-product-left .main-image-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.modal-product-left .modal-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.modal-product-right .breadcrumbs-modal {
+  font-size: 12px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.modal-product-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 10px 0;
+}
+
+.modal-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+.modal-rating-row .divider {
+  color: #cbd5e1;
+}
+.official-partner-tag {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.modal-price-panel {
+  background: #f8fafc;
+  border-left: 4px solid var(--accent-color);
+  padding: 12px 16px;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 16px;
+}
+.modal-price-panel .price-header {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 600;
+}
+.modal-price-panel .price-val {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+.modal-price-panel .price-sub {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.modal-overview-text {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.modal-key-specs h5 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.modal-key-specs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 13px;
+}
+.modal-key-specs li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+}
+
+.modal-action-buttons {
+  display: flex;
+  gap: 12px;
+}
+.btn-quote-primary {
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-quote-primary:hover {
+  background: var(--accent-hover);
+}
+
+/* Specs Table */
+.modal-specs-section h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 6px;
+  display: inline-block;
+}
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.specs-table tr {
+  border-bottom: 1px solid #f1f5f9;
+}
+.specs-table tr:nth-child(even) {
+  background: #f8fafc;
+}
+.specs-table .spec-label {
+  width: 35%;
+  font-weight: 600;
+  color: #475569;
+  padding: 10px 14px;
+}
+.specs-table .spec-val {
+  color: var(--dark-text);
+  padding: 10px 14px;
+}
+
+/* Compare Table Styling */
+.compare-table-wrapper {
+  overflow-x: auto;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.compare-table th, 
+.compare-table td {
+  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  vertical-align: top;
+}
+.compare-table .feature-col {
+  width: 220px;
+  background: #fafbfc;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.compare-header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.compare-header-img {
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+.compare-p-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 6px 0;
+  min-height: 36px;
+}
+.compare-p-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+.compare-specs-ul {
+  list-style: square;
+  padding-left: 18px;
+  margin: 0;
+  font-size: 12px;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN (Tablets & Mobile)
+   ======================================================== */
+@media (max-width: 992px) {
+  .catalogue-main-layout {
+    grid-template-columns: 1fr;
+  }
+  .catalogue-sidebar {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1200;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    padding: 20px;
+    transition: left 0.3s ease;
+  }
+  .catalogue-sidebar.open {
+    left: 0;
+  }
+  .close-sidebar-btn {
+    display: block;
+  }
+  .mobile-filter-btn {
+    display: inline-flex;
+  }
+  body.sidebar-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1150;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogue-top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .top-bar-left,
+  .top-bar-center,
+  .top-bar-right {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  .products-grid.grid-view {
+    grid-template-columns: 1fr;
+  }
+  .products-grid.list-view .startech-product-card {
+    flex-direction: column;
+  }
+  .products-grid.list-view .startech-product-card .product-thumb {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .products-grid.list-view .startech-product-card .product-info {
+    grid-template-columns: 1fr;
+  }
+  .products-grid.list-view .card-bottom-row {
+    border-left: none;
+    border-top: 1px solid #f1f5f9;
+    padding-left: 0;
+    padding-top: 14px;
+  }
+  .modal-product-layout {
+    grid-template-columns: 1fr;
+  }
+}

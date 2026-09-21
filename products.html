@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Equipment Catalogue | Simak International</title>
+  <meta name="description" content="Explore Simak International's comprehensive medical equipment catalogue. High-end CT scanners, MRI systems, ultrasound, endoscopy, patient monitors, and laboratory diagnostics in Bangladesh.">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Simak Base Styles & New Catalogue Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalogue.css">
+</head>
+<body class="catalogue-page">
+
+  <!-- Top Notification Bar -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-contact-info">
+          <span><i class="fas fa-phone-alt"></i> +880 2 9568721, +880 1711-542389</span>
+          <span><i class="fas fa-envelope"></i> info@simakinternational.com</span>
+          <span><i class="fas fa-map-marker-alt"></i> Topkhana Road, Segunbagicha, Dhaka-1000</span>
+        </div>
+        <div class="top-bar-links">
+          <a href="contact.html"><i class="fas fa-headset"></i> Tender Support</a>
+          <a href="about.html"><i class="fas fa-award"></i> Authorized Indenting</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="brand-logo">
+          <img src="images/logo.png" alt="Simak International Logo" class="logo-img" onerror="this.src='images/logo-source.png'">
+          <div class="logo-text">
+            <span class="company-name">SIMAK</span>
+            <span class="company-sub">INTERNATIONAL LTD.</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item active"><a href="products.html" class="nav-link active">Products & Catalogue</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="contact.html?type=quote" class="btn btn-primary-nav">
+            <i class="fas fa-file-contract"></i> Request Tender Quote
+          </a>
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumbs Bar -->
+  <div class="catalogue-breadcrumbs">
+    <div class="container">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <span class="separator">/</span>
+      <span class="current">Products Catalogue</span>
+    </div>
+  </div>
+
+  <!-- Catalogue Header Banner -->
+  <section class="catalogue-header-banner">
+    <div class="container">
+      <h1>Medical Equipment & Diagnostic Catalogue</h1>
+      <p>Official indentor and distributor of premium healthcare technology in Bangladesh. Filter, compare, and request official institutional quotations across global brands including Canon, Mindray, Olympus, Boditech, and Unimed.</p>
+    </div>
+  </section>
+
+  <!-- Catalogue Main Section -->
+  <main class="container">
+    <div class="catalogue-main-layout">
+      
+      <!-- ============================================ -->
+      <!-- LEFT SIDEBAR: STAR TECH STYLE FILTER PANEL   -->
+      <!-- ============================================ -->
+      <aside class="catalogue-sidebar" id="catalogue-sidebar">
+        <div class="d-flex justify-content-between align-items-center mb-2 d-lg-none">
+          <h3 class="m-0 font-weight-bold" style="color: var(--primary-color);">Filters</h3>
+          <button type="button" class="close-sidebar-btn" id="close-filter-sidebar">&times;</button>
+        </div>
+
+        <!-- 1. Category Filter Card -->
+        <div class="filter-card">
+          <div class="filter-card-header">
+            <h4><i class="fas fa-layer-group text-secondary mr-1"></i> Product Category</h4>
+          </div>
+          <div class="filter-card-body">
+            <ul class="filter-item-list" id="category-filter-list">
+              <!-- Dynamically rendered -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. Price Range Filter Card (Star Tech Dual Filter) -->
+        <div class="filter-card">
+          <div class="filter-card-header">
+            <h4><i class="fas fa-coins text-warning mr-1"></i> Price Range (BDT)</h4>
+          </div>
+          <div class="filter-card-body">
+            <div class="price-filter-wrapper">
+              <input type="range" class="price-range-slider" id="price-range-slider" min="50000" max="50000000" step="500000" value="50000000">
+              <div class="price-inputs-row">
+                <div class="price-input-group">
+                  <span>৳</span>
+                  <input type="number" id="price-min-input" value="0" placeholder="Min">
+                </div>
+                <span>to</span>
+                <div class="price-input-group">
+                  <span>৳</span>
+                  <input type="number" id="price-max-input" value="50000000" placeholder="Max">
+                </div>
+              </div>
+              <button type="button" class="btn-apply-price" id="apply-price-filter">
+                <i class="fas fa-filter"></i> Apply Range
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Availability Filter Card -->
+        <div class="filter-card">
+          <div class="filter-card-header">
+            <h4><i class="fas fa-check-circle text-success mr-1"></i> Availability</h4>
+          </div>
+          <div class="filter-card-body">
+            <ul class="filter-item-list" id="availability-filter-list">
+              <!-- Dynamically rendered -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Brand Filter Card with Search -->
+        <div class="filter-card">
+          <div class="filter-card-header">
+            <h4><i class="fas fa-trademark text-primary mr-1"></i> Manufacturers & Brands</h4>
+          </div>
+          <div class="filter-card-body">
+            <div class="brand-search-box">
+              <i class="fas fa-search"></i>
+              <input type="text" id="brand-search-input" placeholder="Search brands...">
+            </div>
+            <ul class="filter-item-list" id="brand-filter-list">
+              <!-- Dynamically rendered -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Reset All Filters Button -->
+        <button type="button" class="btn-clear-filters" id="clear-filters-btn">
+          <i class="fas fa-redo-alt"></i> Reset All Filters
+        </button>
+
+        <!-- Official Support Box -->
+        <div class="filter-card support-card mt-2" style="background: #eef8f7; border-color: #99e2d8;">
+          <div class="filter-card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fas fa-user-md text-secondary fa-2x mr-2"></i>
+              <div>
+                <strong style="color: var(--primary-color);">Need Medical Advisory?</strong>
+                <p class="m-0 text-muted" style="font-size: 11px;">Our clinical engineers assist in facility planning & BOQ tender preparation.</p>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-sm btn-outline-dark btn-block mt-2 font-weight-bold" style="font-size: 12px;">
+              Consult an Engineer
+            </a>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ============================================ -->
+      <!-- RIGHT COLUMN: PRODUCT CATALOGUE & TOP BAR    -->
+      <!-- ============================================ -->
+      <section class="catalogue-content-area">
+        
+        <!-- Top Controls Bar (Star Tech Style) -->
+        <div class="catalogue-top-bar">
+          <div class="top-bar-left">
+            <span class="total-product-info" id="total-product-count">Loading catalogue...</span>
+            
+            <div class="view-mode-switch" title="Display View Mode">
+              <button type="button" class="view-btn active" id="view-grid-btn" title="Grid View">
+                <i class="fas fa-th"></i>
+              </button>
+              <button type="button" class="view-btn" id="view-list-btn" title="List View">
+                <i class="fas fa-list"></i>
+              </button>
+            </div>
+
+            <button type="button" class="mobile-filter-btn" id="mobile-filter-toggle">
+              <i class="fas fa-sliders-h"></i> Filters
+            </button>
+          </div>
+
+          <!-- Instant Search Box -->
+          <div class="top-bar-center">
+            <div class="catalogue-search-wrapper">
+              <input type="text" id="catalogue-search" placeholder="Search equipment, model, specs...">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+
+          <!-- Sort & Show Selectors (Star Tech Style) -->
+          <div class="top-bar-right">
+            <div class="control-group">
+              <label for="show-select">Show:</label>
+              <select id="show-select">
+                <option value="12" selected>12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+                <option value="all">All (36)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="sort-select">Sort By:</label>
+              <select id="sort-select">
+                <option value="default" selected>Default / Featured</option>
+                <option value="name-asc">Name (A - Z)</option>
+                <option value="name-desc">Name (Z - A)</option>
+                <option value="price-asc">Price (Low &gt; High)</option>
+                <option value="price-desc">Price (High &gt; Low)</option>
+                <option value="model-asc">Model (A - Z)</option>
+                <option value="rating-desc">Rating (Highest)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Pills Bar (Dynamically shown) -->
+        <div class="active-filters-bar" id="active-filters-bar" style="display: none;"></div>
+
+        <!-- Products Grid / Cards Container -->
+        <div class="products-grid grid-view" id="products-container">
+          <!-- Dynamically populated by catalogue.js -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-wrapper">
+          <div class="pagination-container" id="pagination-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================ -->
+  <!-- STICKY COMPARISON DRAWER (Star Tech Style)   -->
+  <!-- ============================================ -->
+  <div class="compare-drawer" id="compare-drawer">
+    <div class="compare-drawer-content">
+      <div class="compare-drawer-left">
+        <span class="compare-drawer-title"><i class="fas fa-balance-scale"></i> Compare Equipment (<span id="compare-count">0</span>/4):</span>
+        <div class="compare-items-preview" id="compare-items-preview"></div>
+      </div>
+      <div class="compare-drawer-right">
+        <button type="button" class="btn-clear-compare" id="clear-compare-btn">Clear All</button>
+        <button type="button" class="btn-compare-action" id="compare-action-btn">
+          Compare Specifications <i class="fas fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- MODAL: PRODUCT DETAIL QUICK VIEW             -->
+  <!-- ============================================ -->
+  <div class="modal-overlay" id="product-detail-modal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header-bar">
+        <h3><i class="fas fa-microscope text-secondary mr-2"></i> Equipment Details & Technical Datasheet</h3>
+        <button type="button" class="modal-close-icon" onclick="window.closeProductQuickView()">&times;</button>
+      </div>
+      <div class="modal-body-content" id="product-detail-modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- MODAL: PRODUCT COMPARISON TABLE              -->
+  <!-- ============================================ -->
+  <div class="modal-overlay" id="compare-modal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header-bar">
+        <h3><i class="fas fa-balance-scale text-primary mr-2"></i> Side-by-Side Equipment Comparison</h3>
+        <button type="button" class="modal-close-icon" onclick="window.closeCompareModal()">&times;</button>
+      </div>
+      <div class="modal-body-content" id="compare-modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- MODAL: FORMAL PRICE QUOTE INQUIRY           -->
+  <!-- ============================================ -->
+  <div class="modal-overlay" id="quote-modal">
+    <div class="modal-box" style="max-width: 580px;">
+      <div class="modal-header-bar">
+        <h3><i class="fas fa-file-invoice-dollar text-warning mr-2"></i> Request Official Quotation</h3>
+        <button type="button" class="modal-close-icon" onclick="window.closeQuoteModal()">&times;</button>
+      </div>
+      <div class="modal-body-content">
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your quotation request has been received. Our sales engineer will contact your institution shortly.'); window.closeQuoteModal();">
+          <div class="form-group mb-3">
+            <label class="font-weight-bold" style="font-size: 13px;">Requested Equipment</label>
+            <input type="text" class="form-control" id="quote-product-name" readonly style="background: #f8fafc; font-weight: 600;">
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="font-weight-bold" style="font-size: 13px;">Model / Series</label>
+              <input type="text" class="form-control" id="quote-product-model" readonly style="background: #f8fafc;">
+            </div>
+            <div class="col-md-6">
+              <label class="font-weight-bold" style="font-size: 13px;">Estimated Quantity</label>
+              <input type="number" class="form-control" value="1" min="1" required>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label class="font-weight-bold" style="font-size: 13px;">Institution / Hospital Name *</label>
+            <input type="text" class="form-control" placeholder="e.g. Dhaka Medical College Hospital / Apollo Clinic" required>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="font-weight-bold" style="font-size: 13px;">Contact Person *</label>
+              <input type="text" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="font-weight-bold" style="font-size: 13px;">Phone / Mobile *</label>
+              <input type="tel" class="form-control" placeholder="+880 1..." required>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label class="font-weight-bold" style="font-size: 13px;">Official Email Address *</label>
+            <input type="email" class="form-control" placeholder="procurement@hospital.org" required>
+          </div>
+          <div class="form-group mb-4">
+            <label class="font-weight-bold" style="font-size: 13px;">Procurement Type & Specific Requirements</label>
+            <textarea class="form-control" rows="3" placeholder="Specify tender requirements, turnkey installation, or import duty exemptions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg font-weight-bold" style="background: var(--accent-color); border: none;">
+            Submit Quotation Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section (Consistent with Simak International) -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <div class="footer-logo mb-3">
+            <span class="font-weight-bold text-white" style="font-size: 20px;">SIMAK INTERNATIONAL LTD.</span>
+          </div>
+          <p>Premier medical equipment supply, clinical engineering, and indenting partner in Bangladesh. Delivering cutting-edge diagnostic solutions and turnkey healthcare technology.</p>
+          <div class="footer-social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product Catalogue</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?category=radiology">Radiology & CT / MRI</a></li>
+            <li><a href="products.html?category=ultrasound">Ultrasound Systems</a></li>
+            <li><a href="products.html?category=endoscopy">Endoscopy & EBUS</a></li>
+            <li><a href="products.html?category=critical-care">Ventilators & ICU Monitors</a></li>
+            <li><a href="products.html?category=laboratory">In-Vitro Diagnostics (IVD)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Simak</a></li>
+            <li><a href="services.html">Engineering & Services</a></li>
+            <li><a href="products.html">Equipment Catalogue</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate Headquarters</h4>
+          <p class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Topkhana Road, Segunbagicha, Dhaka-1000, Bangladesh</p>
+          <p class="footer-contact-item"><i class="fas fa-phone-alt"></i> +880 2 9568721</p>
+          <p class="footer-contact-item"><i class="fas fa-envelope"></i> info@simakinternational.com</p>
+          <p class="footer-contact-item"><i class="fas fa-clock"></i> Sun - Thu: 9:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Simak International Ltd. All rights reserved.</p>
+        <p class="text-muted" style="font-size: 12px;">Authorized Distributor & Healthcare Technology Solution Provider</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/catalogue.js"></script>
+</body>
+</html>
