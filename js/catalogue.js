@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <i class="${product.availability === 'in-stock' ? 'fas fa-check-circle' : 'fas fa-clock'}"></i>
               ${product.availabilityText}
             </span>
-            <a href="javascript:void(0)" class="thumb-link" onclick="window.openProductQuickView(${product.id})">
+            <a href="product-detail.html?id=${product.id}" class="thumb-link">
               <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.src='images/logo.png'">
             </a>
           </div>
@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="product-info">
             <div class="product-category-tag">${product.categoryName}</div>
             <h3 class="product-title">
-              <a href="javascript:void(0)" onclick="window.openProductQuickView(${product.id})">${product.name}</a>
+              <a href="product-detail.html?id=${product.id}">${product.name}</a>
             </h3>
 
             <!-- Star Tech Signature Key Features List -->
@@ -790,6 +790,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <button class="btn btn-quote-primary" onclick="window.openQuoteModal(${product.id})">
               <i class="fas fa-file-invoice"></i> Request Official Price Quote
             </button>
+            <a href="product-detail.html?id=${product.id}" class="btn btn-primary">View full details</a>
             <a href="contact.html?product=${encodeURIComponent(product.name)}" class="btn btn-outline-secondary">
               <i class="fas fa-phone-alt"></i> Contact Specialist
             </a>
